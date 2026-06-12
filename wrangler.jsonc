@@ -14,38 +14,14 @@
   "keep_vars": true,
   "upload_source_maps": true,
   "observability": {
-    "logs": {
-      "enabled": true
-    },
-    "traces": {
-      "enabled": true
-    }
+    "logs": { "enabled": true },
+    "traces": { "enabled": true }
   },
   "ai": {
     "binding": "AI",
     "remote": true
   },
-  "analytics_engine_datasets": [
-    {
-      "binding": "ANALYTICS",
-      "dataset": "sink"
-    }
-  ],
-  "kv_namespaces": [
-    {
-      "binding": "KV",
-      "preview_id": "ef93d42dc4b34969bab404d2e80f8dd3",
-      "id": "509250ef8e9a4c2e86dd0fc79dcc559b" // IMPORTANT: Change this to your KV namespace ID
-    }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "R2",
-      "preview_bucket_name": "sink",
-      "bucket_name": "Sink" // IMPORTANT: Change this to your R2 bucket name, or create one with `wrangler r2 bucket create sink`
-    }
-  ],
   "triggers": {
-    "crons": ["0 0 * * *"] // Run backup task daily at 00:00 UTC
+    "crons": ["0 0 * * *"]
   }
 }
